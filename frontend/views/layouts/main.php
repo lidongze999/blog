@@ -46,7 +46,7 @@ AppAsset::register($this);
     } else {
         //如果已经登录 显示头像
         $rightMenus[] = [
-            'label' =>'<img src="/blog/frontend/web/statics/images/avatar/small.jpg"'.Yii::$app->params['avatar']['small'].'" alt="'.Yii::$app->user->identity->username.'">',
+            'label' =>'<img src="'.Yii::$app->user->identity->avatar.'"'.Yii::$app->params['avatar']['small'].'" alt="'.Yii::$app->user->identity->username.'">',
             'linkOptions' => ['class'=>'avatar'],
             'items' => [
                 ['label'=>'<i class="fa fa-sign-out"></i> 退出',

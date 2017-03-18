@@ -42,6 +42,7 @@ class UserModel extends BaseModel implements IdentityInterface
             'email' => '邮箱',
             'status' => '状态',
             'created_at' => '创建时间',
+            'avatar'   => '头像',
         ];
     }
 

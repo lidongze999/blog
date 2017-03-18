@@ -14,7 +14,7 @@ class FeedForm extends Model
     {
         return [
             ['content', 'required'],
-            ['content', 'string', 'max' => 255]
+            ['content', 'string', 'max' => 255],
         ];
     }
 
@@ -22,7 +22,7 @@ class FeedForm extends Model
     {
         return [
             'id' => 'ID',
-            'content' => '内容'
+            'content' => '内容',
         ];
     }
 
@@ -50,6 +50,7 @@ class FeedForm extends Model
             $model = new FeedModel();
             $model->user_id = Yii::$app->user->identity->id;
             $model->content = $this->content;
+
             $model->created_at = time();
             if(!$model->save())
                 throw new \Exception('保存失败！');

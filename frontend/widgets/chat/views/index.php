@@ -24,11 +24,11 @@ use yii\helpers\Url;
         <ul class="media-list media-feed feed-index ps-container ps-active-y">
             <?php foreach ($data['feed'] as $list): ?>
             <li class="media">
-                <div class="media-left">
-                    <a href="#" rel="author" data-oringinal-title="" title="">
-                        <img alt="" class="media-object" src="<?=\Yii::$app->params['upload_url'].'/blog/frontend/web/statics/images/avatar/small.jpg'?>"/>
-                    </a>
-                </div>
+<!--                <div class="media-left">-->
+<!--                    <a href="#" rel="author" data-oringinal-title="" title="">-->
+<!--                        <img alt="" class="media-object" src="--><?//=\Yii::$app->params['upload_url'].'/blog/frontend/web/statics/images/avatar/small.jpg'?><!--"/>-->
+<!--                    </a>-->
+<!--                </div>-->
                 <div class="media-body">
                     <div class="media-content">
                         <a href="#" rel="author" data-oringinal-title="" title="">

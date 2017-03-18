@@ -22,6 +22,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'email') ?>
 
+                <?= $form->field($model,'avatar')->widget('common\widgets\file_upload\FileUpload',[
+                    'config'=>[],])?>
+
                 <?= $form->field($model, 'password')->passwordInput() ?>
 
                 <?= $form->field($model, 'rePassword')->passwordInput() ?>

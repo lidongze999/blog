@@ -16,7 +16,7 @@ class SignupForm extends Model
     public $rePassword;
     //验证码
     public $verifyCode;
-
+    public $avatar;
     /**
      * 验证规则
      */
@@ -33,7 +33,7 @@ class SignupForm extends Model
             ['email', 'email'],
             ['email', 'string', 'max' => 255],
             ['email', 'unique', 'targetClass' => '\common\models\UserModel'],
-
+            ['avatar','string','max' =>255],
             [['password', 'rePassword'], 'required'],
             [['password', 'rePassword'], 'string', 'min' => 6],
             ['rePassword', 'compare', 'compareAttribute' => 'password', 'message' => Yii::t('common', 'Two times the password is not consistent.')],
@@ -50,6 +50,7 @@ class SignupForm extends Model
             'password'   => Yii::t('common', 'Password'),
             'rePassword' => '重复密码',
             'verifyCode' => '验证码',
+            'avatar'     => '头像',
         ];
     }
 
@@ -67,6 +68,7 @@ class SignupForm extends Model
         $user           = new UserModel();
         $user->username = $this->username;
         $user->email    = $this->email;
+        $user->avatar = $this->avatar;
         $user->setPassword($this->password);
         $user->generateAuthKey();
 
